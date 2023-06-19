@@ -16,13 +16,13 @@ import { useAnimalsAdd } from "../hooks/useAnimals";
 import { imgEndPoint } from "../statusVariables";
 
 type FormValues = {
-  name: string;
-  age: number;
-  color: string;
-  imageFile: any;
-  dob: any;
-  imgUrl: string;
-  ownerId: string;
+  name?: string;
+  age?: number;
+  color?: string;
+  imageFile?: any;
+  dob?: any;
+  imgUrl?: string;
+  ownerId?: string;
 };
 
 export const AnimalAdd = ({ closeEvent, ownerId }: any) => {
