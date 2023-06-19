@@ -7,3 +7,6 @@ npm i axios
 
 $ npm i simple-zustand-devtools
 npm i sweetalert2
+
+
+  "homepage": "/dist/",
