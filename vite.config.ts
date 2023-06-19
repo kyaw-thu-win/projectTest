@@ -4,6 +4,6 @@ import react from "@vitejs/plugin-react";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "/projectTest/",
+  base: "/projectTest",
   build: { chunkSizeWarningLimit: 1600 },
 });
