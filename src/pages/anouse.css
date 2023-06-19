@@ -1,0 +1,20 @@
+body{ 
+    overflow: hidden;
+}
+p{
+    position: absolute;
+    white-space: nowrap;
+    /* animation: floatText 30s infinite alternate ease-in-out; */
+    animation: floatText 30s infinite alternate;
+}
+
+@-webkit-keyframes floatText{
+  from {
+    left: 00%;
+  }
+
+  to {
+    /* left: auto; */
+    left: 100%;
+  }
+}

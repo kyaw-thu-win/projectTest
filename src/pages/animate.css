@@ -1,0 +1,47 @@
+.animated {
+    overflow: hidden;
+    width: 11rem;
+    white-space: nowrap;
+  }
+  
+  .animated > * {
+    display: inline-block;
+    position: relative;
+    animation: 30s linear 0s infinite alternate move;
+  }
+  
+  .animated > *.min {
+    min-width: 100%;
+  }
+  
+  @keyframes move {
+    0%,
+    25% {
+      transform: translateX(0%);
+      left: 0%;
+    }
+    75%,
+    100% {
+      transform: translateX(-100%);
+      left: 100%;
+    }
+  }
+  
+  /* Non-solution styles */
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .animated {
+    font-size: 2rem;
+    font-family: sans-serif;
+    border: 0.1rem solid black;
+    margin: 1rem;
+  }
+  
+  .animated > * {
+    box-sizing: border-box;
+    padding: .5rem 1rem;
+  }
