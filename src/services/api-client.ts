@@ -7,7 +7,8 @@ export interface FetchResponse<T> {
 }
 
 const axiosInstance = axios.create({
-  baseURL: "http://localhost:7000/api",
+  // baseURL: "http://localhost:7000/api",
+  baseURL: "https://whispering-ridge-00661-621ed47eba9d.herokuapp.com/api",
   // params: {
   //   key: "3fd660604e0547428c9efd18ee8e9933",
   // },
