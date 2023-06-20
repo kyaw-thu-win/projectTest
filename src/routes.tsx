@@ -18,7 +18,7 @@ import { NewRegisterByOwner } from "./pages/NewRegisterByOwner";
 import AnimalListsSearchOwner from "./components/AnimalListsSearchOwner";
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/projectTest",
     element: <Layout />,
     errorElement: <ErrorPage />,
     children: [
