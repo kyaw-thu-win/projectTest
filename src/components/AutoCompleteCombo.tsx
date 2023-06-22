@@ -3,25 +3,29 @@ import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 import Autocomplete from "@mui/material/Autocomplete";
 import Checkbox from "@mui/material/Checkbox";
 import TextField from "@mui/material/TextField";
-import useQueryStore from "../hooks/queryStore";
 
 const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
 const checkedIcon = <CheckBoxIcon fontSize="small" />;
+interface Props {
+  roleEvent: (role: string[]) => void;
+}
 
-export default function CheckboxesTags() {
-  const setRoles = useQueryStore((s) => s.setRoles);
+export default function CheckboxesTags({ roleEvent }: Props) {
+  // const setRoles = useQueryStore((s) => s.setRoles);
 
   const filterData = (v: any) => {
     let result: any = [];
     v.map((a: any) => {
       result.push(a.value);
     });
-    setRoles(result);
+    // setRoles(result);
+    roleEvent(result);
   };
   return (
     <>
       <Autocomplete
         multiple
+        size="small"
         id="checkboxes-tags-demo"
         options={userRoles}
         disableCloseOnSelect
@@ -40,7 +44,7 @@ export default function CheckboxesTags() {
             {option.label}
           </li>
         )}
-        style={{ width: 500 }}
+        style={{ width: 300 }}
         renderInput={(params) => (
           <TextField {...params} label="User Roles" placeholder="User Roles" />
         )}

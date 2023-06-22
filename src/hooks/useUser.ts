@@ -32,20 +32,18 @@ export const useUsersAll = () => {
   });
 };
 
-export const useUsers = () => {
+export const useUsers = (page: number, pageSize: number, roles: string[]) => {
   const token = useAppStore((s) => s.token);
   const apiClient = new APIClient<User>("/users", token);
-  const page = useQueryStore((s) => s.page);
-  const pageSize = useQueryStore((s) => s.pageSize);
-  const roles = useQueryStore((s) => s.roles);
+  roles = roles && roles.length > 0 ? roles : ["User"];
   return useQuery<FetchResponse<User>, Error>({
     queryKey: ["users", page, pageSize, roles],
     // queryKey: ["users"],
     queryFn: () =>
       apiClient.getAll({
         params: {
-          pageNumber: page || 0,
-          pageSize: pageSize || 10,
+          page: page,
+          pageSize: pageSize,
           roles: roles,
         },
       }),

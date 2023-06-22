@@ -1,16 +1,16 @@
 import moment from "moment";
 
 export interface User {
-  data: any;
-  id?: number;
-  name: string;
-  email: string;
-  password: string;
-  isActive: boolean;
+  _id?: string;
+  name?: string;
+  email?: string;
+  password?: string;
+  isActive?: boolean;
   creationDate?: Date | string;
   imgUrl?: string;
   roles?: string[];
-  imageFile: any;
+  imageFile?: any;
+  ""?: any;
 }
 
 export default interface UserResult {
