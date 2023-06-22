@@ -1,22 +1,18 @@
-import {
-  TextField,
-  Button,
-  Stack,
-  Box,
-  Grid,
-  Paper,
-  Avatar,
-  FormControlLabel,
-  Typography,
-  Link,
-} from "@mui/material";
-import { useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
-import { CheckBox } from "@mui/icons-material";
+import {
+  Avatar,
+  Box,
+  Button,
+  Grid,
+  Paper,
+  Stack,
+  TextField,
+} from "@mui/material";
+import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import useAuth from "../hooks/useAuth";
 import useAppStore from "../appStore";
+import useAuth from "../hooks/useAuth";
 
 type FormValues = {
   email: string;
@@ -107,11 +103,12 @@ export const LoginForm = () => {
               required
               margin="dense"
             />
-            <FormControlLabel
+            <Box height="10px" />
+            {/* <FormControlLabel
               control={<CheckBox name="checkedB" color="primary" />}
               label="Remember me"
               sx={{ marginY: "10px" }}
-            />
+            /> */}
             <Button
               type="submit"
               variant="contained"
@@ -123,18 +120,17 @@ export const LoginForm = () => {
             </Button>
           </Stack>
         </form>
-        <Typography sx={{ marginY: "5px" }}>
+        {/* <Typography sx={{ marginY: "5px" }}>
           <Link href="#" onClick={() => {}}>
             Forgot password ?
           </Link>
-        </Typography>
-        <Typography>
+        </Typography> */}
+        {/* <Typography>
           Do you have an account ?
           <Link href="#" onClick={() => {}}>
             Sign up ?
           </Link>
-        </Typography>
-        <Typography>AAA</Typography>
+        </Typography> */}
       </Paper>
       <DevTool control={control} />
     </Grid>

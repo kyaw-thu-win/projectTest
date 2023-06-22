@@ -54,9 +54,8 @@ const router = createBrowserRouter(
     },
   ],
   {
-    basename: "/projectTest/",
+    basename: "/projectTest",
   }
 );
-<Link to="/" />;
 
 export default router;
